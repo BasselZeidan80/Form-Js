@@ -237,7 +237,9 @@ input[type="submit"]:active {
     right: 0%;
 }
 
-
+.liness a{
+    cursor: pointer;
+}
 
 .login-box a:hover {
     background: #03e9f4;
