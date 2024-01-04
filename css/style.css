@@ -1,0 +1,380 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     flex-direction: column;
+     background-image: url("../images/12.jpg");
+      background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+
+     /* background: #0368db; */
+ }
+
+ .box {
+     position: relative;
+     width: 380px;
+     height: 500px;
+     background: #1c1c1c;
+     border-radius: 8px;
+     overflow: hidden;
+ }
+
+ .box::before {
+     content: '';
+     z-index: 1;
+     position: absolute;
+     top: -50%;
+     left: -50%;
+     width: 380px;
+     height: 420px;
+     transform-origin: bottom right;
+     background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+     animation: animate 6s linear infinite;
+ }
+
+ .box::after {
+     content: '';
+     z-index: 1;
+     position: absolute;
+     top: -50%;
+     left: -50%;
+     width: 380px;
+     height: 420px;
+     transform-origin: bottom right;
+     background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+     animation: animate 6s linear infinite;
+     animation-delay: -3s;
+ }
+
+ @keyframes animate {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+ .form {
+
+    background-image: linear-gradient(to right , #00000079 , #00000083) , url("../images/12.jpg");
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+
+     position: absolute;
+     inset: 2px;
+     backdrop-filter: blur(5px);
+     /* background: #28292d; */
+     padding: 50px 40px;
+     border-radius: 8px;
+     z-index: 2;
+     display: flex;
+     flex-direction: column;
+ }
+
+ h2 {
+     color: #45f3ff;
+     font-weight: 500;
+     text-align: center;
+     letter-spacing: 0.1em;
+ }
+
+ .inputBox {
+     position: relative;
+     width: 300px;
+     margin-top: 35px;
+ }
+
+ .inputBox input {
+     position: relative;
+     width: 100%;
+     padding: 20px 10px 10px;
+     background: transparent;
+     outline: none;
+     box-shadow: none;
+     border: none;
+     color: #23242a;
+     font-size: 1em;
+     letter-spacing: 0.05em;
+     transition: 0.5s;
+     z-index: 10;
+ }
+
+
+ .inputBox span {
+     position: absolute;
+     left: 0;
+     padding: 20px 0px 10px;
+     pointer-events: none;
+     font-size: 1em;
+     color: #8f8f8f;
+     letter-spacing: 0.05em;
+     transition: 0.5s;
+ }
+
+ .inputBox input:valid~span,
+ .inputBox input:focus~span {
+     color: #45f3ff;
+     transform: translateX(0px) translateY(-34px);
+     font-size: 0.75em;
+ }
+
+ .inputBox i {
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     height: 2px;
+     background: #45f3ff;
+     border-radius: 4px;
+     overflow: hidden;
+     transition: 0.5s;
+     pointer-events: none;
+     z-index: 9;
+ }
+
+ .inputBox input:valid~i,
+ .inputBox input:focus~i {
+     height: 44px;
+ }
+
+ .links {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .links a {
+     margin: 10px 0;
+     font-size: 0.75em;
+     color: #8f8f8f;
+     text-decoration: beige;
+ }
+
+ .links a:hover,
+ .links a:nth-child(2) {
+     color: #45f3ff;
+ }
+
+ input[type="submit"] {
+     color: #000;
+     border: none;
+     outline: none;
+     padding: 11px 25px;
+     background: #45f3ff;
+     cursor: pointer;
+     border-radius: 4px;
+     font-weight: 600;
+     width: 100px;
+     margin-top: 10px;
+ }
+
+ input[type="submit"]:active {
+     opacity: 0.8;
+ }
+
+ /* 
+ .layer {
+
+
+
+     position: relative;
+
+ } */
+
+
+ .liness {
+     position: relative;
+     overflow: hidden;
+ }
+
+ .line {
+     position: absolute;
+     height: 2px;
+     width: 100%;
+     bottom: 0;
+     right: 100%;
+     background-color: #45f3ff;
+     transition: 0.5s all;
+ }
+
+ .liness:hover .line {
+     right: 0%;
+ }
+
+
+ .login-box a {
+     position: relative;
+     display: inline-block;
+     padding: 10px 20px;
+     color: #03e9f4;
+     font-size: 16px;
+     text-decoration: none;
+     text-transform: uppercase;
+     overflow: hidden;
+     transition: .5s;
+     margin-top: 40px;
+     letter-spacing: 4px;
+     cursor: pointer;
+
+ }
+
+ .login-box a:hover {
+    
+     background: #03e9f4;
+     color: #fff;
+     border-radius: 5px;
+     box-shadow: 0 0 5px #03e9f4,
+         0 0 25px #03e9f4,
+         0 0 50px #03e9f4,
+         0 0 100px #03e9f4;
+ }
+
+ .login-box a span {
+     position: absolute;
+     display: block;
+ }
+
+ .login-box a span:nth-child(1) {
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(90deg, transparent, #03e9f4);
+     animation: btn-anim1 1s linear infinite;
+ }
+
+ @keyframes btn-anim1 {
+     0% {
+         left: -100%;
+     }
+
+     50%,
+     100% {
+         left: 100%;
+     }
+ }
+
+ .login-box a span:nth-child(2) {
+     top: -100%;
+     right: 0;
+     width: 2px;
+     height: 100%;
+     background: linear-gradient(180deg, transparent, #03e9f4);
+     animation: btn-anim2 1s linear infinite;
+     animation-delay: .25s
+ }
+
+ @keyframes btn-anim2 {
+     0% {
+         top: -100%;
+     }
+
+     50%,
+     100% {
+         top: 100%;
+     }
+ }
+
+ .login-box a span:nth-child(3) {
+     bottom: 0;
+     right: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(270deg, transparent, #03e9f4);
+     animation: btn-anim3 1s linear infinite;
+     animation-delay: .5s
+ }
+
+ @keyframes btn-anim3 {
+     0% {
+         right: -100%;
+     }
+
+     50%,
+     100% {
+         right: 100%;
+     }
+ }
+
+ .login-box a span:nth-child(4) {
+     bottom: -100%;
+     left: 0;
+     width: 2px;
+     height: 100%;
+     background: linear-gradient(360deg, transparent, #03e9f4);
+     animation: btn-anim4 1s linear infinite;
+     animation-delay: .75s
+ }
+
+ @keyframes btn-anim4 {
+     0% {
+         bottom: -100%;
+     }
+
+     50%,
+     100% {
+         bottom: 100%;
+     }
+ }
+
+ 
+
+ .layerForget{
+    color:#03e9f4 ;
+    position: fixed;
+    z-index: 3333;
+    height: 700px;
+    width: 70%;
+    background-color: rgba(22, 22, 22, 0.808);
+    
+ }
+
+ @media screen and (max-width: 767px) {
+    .layerForget{
+    
+        position: fixed;
+        z-index: 3333;
+        height: 80%;
+        width: 100%;
+        background-color: rgba(22, 22, 22, 0.808);
+        
+     }
+ }
+
+ .content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+ }
+ .xMark{
+    font-size: 30px;
+    
+     cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 1%;
+ }
+ .captionText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+ }

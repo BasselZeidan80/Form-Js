@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/signUp.css" />
+</head>
+
+<body>
+  <!-- // -->
+
+  <div class="layer">
+    <div class="box">
+      <form>
+        <div class="form">
+          <h2>Sign Up</h2>
+          <div class="inputBox">
+            <input type="text" required="required" id="Uname" />
+            <span>Username</span>
+            <i></i>
+          </div>
+          <div class="inputBox">
+            <input type="email" required="required" id="email" />
+
+            <span>Email</span>
+            <i></i>
+          </div>
+          <p id="msg-error" class="text-danger d-none">
+            email is already taken
+          </p>
+          <div class="inputBox">
+            <input type="password" required="required" id="Password" />
+            <span>Password</span>
+            <i></i>
+          </div>
+          <p id="valid" class="text-success d-none">Sucess</p>
+          <p id="invalid" class="text-danger d-none">Invalid data</p>
+          <div class="links">
+            <a href="#"> </a>
+            <div class="liness">
+              <a onclick="transitionToPage()" href="/">Login</a>
+              <div class="line"></div>
+            </div>
+          </div>
+          <div class="login-box">
+            <a id="signUp">
+              <span></span>
+              <span></span>
+              <span></span>
+              Sign Up
+            </a>
+            <!-- <button class="button" id="signUp">Sign Up</button> -->
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- // -->
+
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/signUp.js"></script>
+</body>
+
+</html>
