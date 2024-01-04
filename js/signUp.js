@@ -49,7 +49,7 @@ signUp.addEventListener("click", function () {
         arrList.push(inputsUs);
         localStorage.setItem("Users", JSON.stringify(arrList));
         console.log("pushed");
-        window.location.href = "/";
+        window.location.href = "./";
       }
     }
   }

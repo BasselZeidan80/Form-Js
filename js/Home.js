@@ -8,7 +8,7 @@ if (localStorage.getItem("Users") != null) {
 
 //logout function
 logout.addEventListener("click", function () {
-  window.location.href = "/";
+  window.location.href = "./";
 });
 
 //getUser Name

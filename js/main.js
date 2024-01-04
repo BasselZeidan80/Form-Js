@@ -42,7 +42,7 @@ submit.addEventListener("click", function () {
       }
 
       if (exist) {
-        window.location.href = `/Home.html`;
+        window.location.href = `./Home.html`;
         clearForm();
       } else {
         alertify.error("Invalid Email or password");
