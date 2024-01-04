@@ -5,7 +5,7 @@ var email = document.getElementById("email");
 var password = document.getElementById("Password");
 var emailRegex = /^[a-zA-Z0-9]{3,30}@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/;
 var passRegex = /^[A-z0-9@#$_!-]{8,}$/;
-var userRegex = /^[a-zA-Z0-9]{3,}$/;
+var userRegex = /^[a-zA-Z0-9]{3,25}$/;
 var signUp = document.getElementById("signUp");
 var validText = document.getElementById("valid");
 var invalidText = document.getElementById("invalid");
@@ -90,3 +90,48 @@ window.transitionToPage = function (href) {
 document.addEventListener("DOMContentLoaded", function (event) {
   document.querySelector("body").style.opacity = 1;
 });
+
+function validationUser() {
+  var msgErr = document.getElementById("msgErr");
+  var user = userName.value;
+
+  if (userRegex.test(user) == true) {
+    userName.classList.add("is-valid");
+    userName.classList.remove("is-invalid");
+    msgErr.classList.add("d-none");
+  } else {
+    msgErr.classList.remove("d-none");
+
+    userName.classList.add("is-invalid");
+    userName.classList.remove("is-valid");
+  }
+  clearValidation();
+}
+
+function validationEmail() {
+  var EEmail = email.value;
+  var msgErrEmail = document.getElementById("msgErrEmail");
+  if (emailRegex.test(EEmail) == true) {
+    msgErrEmail.classList.add("d-none");
+  } else {
+    msgErrEmail.classList.remove("d-none");
+  }
+  clearValidation();
+}
+
+function clearValidation() {
+  var msgErr = document.getElementById("msgErr");
+  var msgErrEmail = document.getElementById("msgErrEmail");
+
+  var user = userName.value;
+
+  var EEmail = email.value;
+
+  if (user.length == 0) {
+    msgErr.classList.add("d-none");
+  }
+
+  if (EEmail.length == 0) {
+    msgErrEmail.classList.add("d-none");
+  }
+}

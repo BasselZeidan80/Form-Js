@@ -18,16 +18,21 @@
         <div class="form">
           <h2>Sign Up</h2>
           <div class="inputBox">
-            <input type="text" required="required" id="Uname" />
+            <input oninput="validationUser()" type="text" required="required" id="Uname" class="d" />
             <span>Username</span>
             <i></i>
+
           </div>
+          <p class="text-danger d-none" id="msgErr">more Than 3 ch without space</p>
+
           <div class="inputBox">
-            <input type="email" required="required" id="email" />
+            <input oninput="validationEmail()" type="email" required="required" id="email" />
 
             <span>Email</span>
             <i></i>
           </div>
+          <p class="text-danger d-none" id="msgErrEmail">Should Follow Email Format</p>
+
           <p id="msg-error" class="text-danger d-none">
             email is already taken
           </p>
